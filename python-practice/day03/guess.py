@@ -1,12 +1,14 @@
-# تمرين 4: لعبة التخمين (while + break)
-# الرقم السري ثابت = 7.
-# المطلوب: اطلب من المستخدم أن يخمّن، واطبع Too high أو Too low
-# حتى يصيب، ثم اطبع Correct! مع عدد المحاولات.
-# اختبر بالتخمينات: 3 ثم 9 ثم 7
-#   Too low
-#   Too high
-#   Correct! Attempts: 3
+secret = 7
+attempts = 0
 
-# خطتي بالعربية:
-# 1.
+while True:
+    guess = int(input("Guess: "))
+    attempts += 1
 
+    if guess == secret:
+        print(f"Correct! Attempts: {attempts}")
+        break
+    elif guess > secret:
+        print("Too high")
+    else:
+        print("Too low")

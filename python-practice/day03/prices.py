@@ -1,14 +1,15 @@
-# تمرين 1: القوائم والحلقة for
-# عندك هذه القائمة:
-# prices = [12.5, 30, 8.75, 45, 20]
-# المطلوب: بحلقة for احسب واطبع:
-#   - المجموع، وأغلى سعر، والمتوسط (رقمين عشريين)
-# النتيجة المتوقعة:
-#   Total: 116.25
-#   Highest: 45.00
-#   Average: 23.25
-# تلميح: لا تستخدم sum() ولا max() في المحاولة الأولى، اكتب الحلقة بنفسك.
+prices = [12.5, 30, 8.75, 45, 20]
 
-# خطتي بالعربية:
-# 1.
+total = 0
+highest = prices[0]
 
+for price in prices:
+    total += price
+    if price > highest:
+        highest = price
+
+average = total / len(prices)
+
+print(f"Total: {total:.2f}")
+print(f"Highest: {highest:.2f}")
+print(f"Average: {average:.2f}")

@@ -1,10 +1,10 @@
-# تمرين 6 (تحدٍّ اختياري): سلة المشتريات (while + list)
-# المطلوب: اطلب أسعاراً واحداً بعد الآخر، وأوقف عند إدخال 0.
-# خزّن الأسعار في قائمة (append)، ثم اطبع عدد العناصر ومجموعها.
-# اختبر بالإدخال: 10 ثم 5.5 ثم 0
-#   Items: 2
-#   Total: 15.50
+prices = []
 
-# خطتي بالعربية:
-# 1.
+while True:
+    price = float(input("Price (0 to finish): "))
+    if price == 0:
+        break
+    prices.append(price)
 
+print(f"Items: {len(prices)}")
+print(f"Total: {sum(prices):.2f}")
